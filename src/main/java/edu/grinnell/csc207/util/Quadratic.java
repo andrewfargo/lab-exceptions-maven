@@ -41,7 +41,7 @@ public class Quadratic {
    * @param constant
    *   The constant.
    */
-  public Quadratic(int squared, int linear, int constant) throws Exception{
+  public Quadratic(int squared, int linear, int constant) {
     this.a = squared;
     this.b = linear;
     this.c = constant;
@@ -95,6 +95,9 @@ public class Quadratic {
    *   is only one).
    */
   public double smallerRoot() throws Exception {
+    if (a == 0) {
+      throw new Exception("Cannot compute quadratic roots of linear functions.");
+    }
     return (((-1 * b) - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
   } // smallerRoot
 
