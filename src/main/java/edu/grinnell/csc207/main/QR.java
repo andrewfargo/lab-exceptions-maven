@@ -29,6 +29,27 @@ public class QR {
 
     // ...
 
+    pen.println("Hi! I'm here to help you understand quadratic functions.");
+
+    pen.print("Please enter a (squared term): ");
+    pen.flush();
+    int a = Integer.parseInt(eyes.readLine());
+
+    pen.print("Please enter b (linear term): ");
+    pen.flush();
+    int b = Integer.parseInt(eyes.readLine());
+
+    pen.print("Please enter c (constant term): ");
+    pen.flush();
+    int c = Integer.parseInt(eyes.readLine());
+
+    Quadratic input = new Quadratic(a,b,c);
+    double root = input.smallerRoot();
+
+    pen.println("The smaller root of " + input + " is " + root);
+
+    pen.println("Experimentally, " + input.toString((int) root) + " = " + input.evaluate(root));
+
     eyes.close();
     pen.close();
   } // main(String[])

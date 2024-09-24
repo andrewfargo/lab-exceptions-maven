@@ -41,7 +41,7 @@ public class Quadratic {
    * @param constant
    *   The constant.
    */
-  public Quadratic(int squared, int linear, int constant) {
+  public Quadratic(int squared, int linear, int constant) throws Exception{
     this.a = squared;
     this.b = linear;
     this.c = constant;
@@ -84,8 +84,8 @@ public class Quadratic {
    *
    * @return the value
    */
-  public int evaluate(int x) {
-    return this.a * x * x + this.b * x + this.c;
+  public double evaluate(double x) {
+    return ((double) this.a) * x * x + ((double) this.b) * x + ((double) this.c);
   } // evaluate(double)
 
   /**
@@ -94,7 +94,7 @@ public class Quadratic {
    * @return the smaller of the two roots (or the only root, if there
    *   is only one).
    */
-  public double smallerRoot() {
+  public double smallerRoot() throws Exception {
     return (((-1 * b) - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
   } // smallerRoot
 
