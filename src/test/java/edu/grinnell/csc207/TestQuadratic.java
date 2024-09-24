@@ -44,7 +44,7 @@ public class TestQuadratic {
     assertEquals(-1, (new Quadratic(1, -1, -2)).smallerRoot(), 0.001,
     "The smaller root of (x-1)(x-2)");
     // (2x + 3)(3x + 4)
-    assertEquals(4.0/3.0, (new Quadratic(6, 17, 12)).smallerRoot(), 0.001,
+    assertEquals(-3.0/2.0, (new Quadratic(6, 17, 12)).smallerRoot(), 0.001,
     "The smaller root of (x-1)(x-2)");
   }
 
